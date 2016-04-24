@@ -14,6 +14,8 @@
 		8AA46FE81CCB444000451982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA46FE61CCB444000451982 /* LaunchScreen.storyboard */; };
 		8AA46FF31CCB444000451982 /* HDI_AgenteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA46FF21CCB444000451982 /* HDI_AgenteTests.swift */; };
 		8AA46FFE1CCB444000451982 /* HDI_AgenteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA46FFD1CCB444000451982 /* HDI_AgenteUITests.swift */; };
+		8AA4700E1CCB449B00451982 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA4700D1CCB449B00451982 /* SWRevealViewController.m */; };
+		8AA470101CCB4D2A00451982 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA4700F1CCB4D2A00451982 /* BackTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		8AA46FF91CCB444000451982 /* HDI AgenteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HDI AgenteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA46FFD1CCB444000451982 /* HDI_AgenteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDI_AgenteUITests.swift; sourceTree = "<group>"; };
 		8AA46FFF1CCB444000451982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AA4700B1CCB449A00451982 /* HDI Agente-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HDI Agente-Bridging-Header.h"; sourceTree = "<group>"; };
+		8AA4700C1CCB449B00451982 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8AA4700D1CCB449B00451982 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8AA4700F1CCB4D2A00451982 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +106,13 @@
 				8AA46FDD1CCB444000451982 /* AppDelegate.swift */,
 				8AA46FDF1CCB444000451982 /* ViewController.swift */,
 				8AA46FE11CCB444000451982 /* Main.storyboard */,
+				8AA4700F1CCB4D2A00451982 /* BackTableVC.swift */,
 				8AA46FE41CCB444000451982 /* Assets.xcassets */,
 				8AA46FE61CCB444000451982 /* LaunchScreen.storyboard */,
 				8AA46FE91CCB444000451982 /* Info.plist */,
+				8AA4700C1CCB449B00451982 /* SWRevealViewController.h */,
+				8AA4700D1CCB449B00451982 /* SWRevealViewController.m */,
+				8AA4700B1CCB449A00451982 /* HDI Agente-Bridging-Header.h */,
 			);
 			path = "HDI Agente";
 			sourceTree = "<group>";
@@ -261,6 +271,8 @@
 			files = (
 				8AA46FE01CCB444000451982 /* ViewController.swift in Sources */,
 				8AA46FDE1CCB444000451982 /* AppDelegate.swift in Sources */,
+				8AA470101CCB4D2A00451982 /* BackTableVC.swift in Sources */,
+				8AA4700E1CCB449B00451982 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,10 +414,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "HDI Agente/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "In-die-Apps.HDI-Agente";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HDI Agente/HDI Agente-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,10 +429,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "HDI Agente/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "In-die-Apps.HDI-Agente";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HDI Agente/HDI Agente-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -487,6 +506,7 @@
 				8AA470041CCB444000451982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AA470051CCB444000451982 /* Build configuration list for PBXNativeTarget "HDI AgenteTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +515,7 @@
 				8AA470071CCB444000451982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AA470081CCB444000451982 /* Build configuration list for PBXNativeTarget "HDI AgenteUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +524,7 @@
 				8AA4700A1CCB444000451982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
